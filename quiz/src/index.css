@@ -1,69 +1,143 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@import url("https://fonts.googleapis.com/css2?family=Gabarito&display=swap");
 
 body {
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: whitesmoke;
+  font-family: "Gabarito", sans-serif;
+  color: white;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #072c50;
+}
+
+.modal-title {
+  color: black;
+}
+
+.modal-content {
+  background-color: whitesmoke;
+}
+
+.join {
+  margin-left: 25px;
+}
+
+.join input {
+  margin-right: 25px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 10px;
+  border: none;
+  font-family: "Gabarito", sans-serif;
+  border-radius: 20px;
+  background-color: #9d00ff;
+  color: #ffffff;
+  width: 150px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 2px 5px 50px -1px #9d00ff;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.lobbies button {
+  width: 100px;
+}
+
+input {
+  font-family: "Gabarito", sans-serif;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.lobbyContainer input {
+  margin-bottom: 25px;
+}
+
+.lobbyContainer button {
+  padding: 10px;
+  border: none;
+  font-family: "Gabarito", sans-serif;
+  border-radius: 20px;
+  background-color: #9d00ff;
+  color: #ffffff;
+  cursor: pointer;
+  width: 100px;
+  margin: auto;
+}
+
+.lobbyContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+  grid-template-areas:
+    "input input lobbies"
+    "image image lobbies"
+    ". . lobbies";
+  grid-column: 1fr 2fr;
+  gap: 20px;
+}
+.container {
+  display: flex;
+}
+
+.bigContainer {
+  overflow-y: auto;
+  max-height: 600px;
+  grid-area: lobbies;
+}
+.lobbies {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  background-color: white;
+  height: 80px;
+  width: 350px;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.lobbies button {
+  box-shadow: 0px 0px 40px -6px #9d00ff;
+}
+.grid-nameInput {
+  grid-area: input;
+  width: 500px;
+  padding: 10px;
+}
+
+.grid-nameInput input {
+  width: 100%;
+}
+
+.grid-Image {
+  grid-area: image;
+}
+
+.info {
+  line-height: 10px;
+}
+
+p {
+  margin-top: null !important;
+}
+
+.btn-close {
+  background-color: whitesmoke !important;
 }

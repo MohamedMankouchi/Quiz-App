@@ -1,10 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router";
+import { createContext } from "react";
+import { io } from "socket.io-client";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const socket = io("http://localhost:3000");
+export const socketContext = createContext();
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <socketContext.Provider value={socket}>
+      <RouterProvider router={router} />
+    </socketContext.Provider>
+  </React.StrictMode>
+);

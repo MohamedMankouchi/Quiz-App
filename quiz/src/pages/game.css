@@ -1,0 +1,85 @@
+.gameContainer {
+  display: grid;
+  padding-top: 30px;
+  grid-template-columns: 0.4fr 1fr 0.6fr;
+  gap: 20px;
+  grid-template-areas:
+    ". word ."
+    "players canvas chat"
+    "players canvas chat";
+}
+.error {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.players {
+  grid-area: players;
+  height: 100%;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-left: 25px;
+  background-color: #072c50;
+}
+
+.players h2,
+.chat h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.word {
+  grid-area: word;
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.canvas {
+  grid-area: canvas;
+}
+
+.canvas-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.chat {
+  grid-area: chat;
+  border-radius: 10px;
+  margin-right: 25px;
+  background-color: #072c50;
+}
+.players-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  line-height: 10px;
+}
+
+.align-items-start {
+  align-items: center !important;
+  gap: 20px;
+}
+
+.status {
+  background: linear-gradient(94deg, #072c50 0%, rgba(36, 12, 57, 1) 100%);
+}
+
+.chat-body span {
+  font-weight: bold;
+}
+
+.chat-body {
+  padding: 10px;
+  border-radius: 5px;
+  height: 400px;
+  overflow-y: auto;
+}
