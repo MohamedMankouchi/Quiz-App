@@ -51,7 +51,7 @@ export const LobbiesCard = ({ socket }) => {
           <input
             type="text"
             placeholder="Enter a name"
-            onChange={(e) => setUsername(e.target.value )}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </div>
 
@@ -88,7 +88,7 @@ export const LobbiesCard = ({ socket }) => {
                 fontSize: "20px",
               }}
             >
-              No lobbies availabe !
+              No lobbies available !
             </p>
           )}
         </div>
