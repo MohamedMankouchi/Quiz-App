@@ -58,7 +58,7 @@ io.on("connection", (socket) => {
       const user = users.find((el) => el.socketId == socket.id);
       if (user) {
         users = users.filter((el) => el.socketId != socket.id);
-        io.to(user.roomId).emit("getUserLeft", { users, user });
+        io.emit("getUserLeft", { users, user });
       }
     }
   });
