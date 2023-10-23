@@ -8,7 +8,7 @@ export const Error = () => {
         <p style={{ color: "black", fontSize: "20px" }}>Lobby not found</p>
         <Link to={"/"}>
           {" "}
-          <button> ⬅️ Go back</button>
+          <button>Go back</button>
         </Link>
       </div>
     </>

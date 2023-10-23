@@ -8,7 +8,7 @@ import { socketContext } from "../main";
 import toast, { Toaster } from "react-hot-toast";
 import Badge from "react-bootstrap/Badge";
 import ListGroup from "react-bootstrap/ListGroup";
-
+import { Link } from "react-router-dom";
 export const Game = () => {
   const socket = useContext(socketContext);
   const ref = useRef();
@@ -265,6 +265,9 @@ export const Game = () => {
                 </>
               ))}
           </ListGroup>
+          <Link to={"/"}>
+            <button>Go back</button>
+          </Link>
         </div>
       ) : (
         <>
