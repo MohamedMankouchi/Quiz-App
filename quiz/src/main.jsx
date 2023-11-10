@@ -7,7 +7,7 @@ import router from "./routes/router";
 import { createContext } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:3000");
+const socket = io("https://quiz-io-backend.onrender.com");
 export const socketContext = createContext();
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
